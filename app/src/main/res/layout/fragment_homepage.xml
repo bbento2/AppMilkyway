@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@drawable/background2">
+
+    <!-- Main vertical layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Top Section with User Profile -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp">
+
+            <!--ให้รูปหมูเด้งกลม-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@id/ShapeableImageView"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                android:src="@mipmap/ic_moodeng"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_text2"
+                android:fontFamily="@font/margarine"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:text="Hello Moo Deng"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Playlist Section Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Playlists"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/margarine"
+            android:gravity="start"
+            android:background="@drawable/custom_text"/>
+
+        <!--ทำกล่องพื้นหลัง playlists-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/yellow2">
+
+        <!--ให้มันเลื่อนดูได้-->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+        <!-- Playlists Grid -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="5"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <!-- Example Playlist Items -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/playlist1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Playlist Image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_text3"
+                    android:fontFamily="@font/margarine"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Freetime"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/meme2"
+                    android:contentDescription="Playlist Image"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_text3"
+                    android:fontFamily="@font/margarine"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Funny"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Playlist Image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meme3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_text3"
+                    android:fontFamily="@font/margarine"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Party"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Playlist Image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meme4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_text3"
+                    android:fontFamily="@font/margarine"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Happy"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="Playlist Image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/meme5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_text3"
+                    android:fontFamily="@font/margarine"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Lazy"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </GridLayout>
+        </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <!--Artist-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_text"
+            android:fontFamily="@font/margarine"
+            android:padding="10dp"
+            android:text="Artist"
+            android:textSize="20sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/yellow2">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <!-- Playlists Grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="1"
+                    android:columnCount="5"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Example Playlist Items -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="Artist Image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rose" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_text3"
+                            android:fontFamily="@font/margarine"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Rosé"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/lisa"
+                            android:contentDescription="Artist Image"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_text3"
+                            android:fontFamily="@font/margarine"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Lisa"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="Artist Image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/jennie" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_text3"
+                            android:fontFamily="@font/margarine"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Jennie"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="Artist Image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/jisoo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_text3"
+                            android:fontFamily="@font/margarine"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Jisoo"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:contentDescription="Artist Image"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/chaeunwoo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_text3"
+                            android:fontFamily="@font/margarine"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Cha eun woo"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </GridLayout>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</FrameLayout>
